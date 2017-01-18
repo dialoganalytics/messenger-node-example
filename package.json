@@ -1,0 +1,20 @@
+{
+  "name": "messenger-node-example",
+  "version": "1.0.0",
+  "description": "An example Facebook Messenger node.js chatbot integrated with Dialog Analytics",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "debug": "node debug bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dialog Analytics",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "dialog-api": "0.0.9",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  }
+}
