@@ -7,6 +7,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 
+var templateMessage = require('./payloads/template');
+var textMessage = require('./payloads/text');
+var quickRepliesMessage = require('./payloads/quick_replies');
+
 var dialog = new Dialog(process.env.DIALOG_API_TOKEN, process.env.DIALOG_BOT_ID);
 
 var app = express();
@@ -36,13 +40,20 @@ app.post(webHookPath, function(req, res) {
 
     if (event.message.is_echo) { return; };
 
+    var message = null
+    if (event.message.text.match(/template/)) {
+      message = templateMessage;
+    } else if (event.message.text.match(/quick replies/)) {
+      message = quickRepliesMessage;
+    } else {
+      message = textMessage;
+    };
+
     var payload = {
       recipient: {
         id: event.sender.id
       },
-      message: {
-        text: 'Hey human!'
-      }
+      message: message
     };
 
     var options = {
