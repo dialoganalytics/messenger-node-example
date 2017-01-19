@@ -31,12 +31,14 @@ app.get(webHookPath, function(req, res) {
 });
 
 app.post(webHookPath, function(req, res) {
-  dialog.incoming(req.body);
+  var data = req.body;
 
-  var messagingEvents = req.body.entry[0].messaging;
+  dialog.incoming(data);
+
+  var messagingEvents = data.entry[0].messaging;
 
   if (messagingEvents.length && messagingEvents[0].message && messagingEvents[0].message.text) {
-    var event = req.body.entry[0].messaging[0];
+    var event = data.entry[0].messaging[0];
 
     if (event.message.is_echo) { return; };
 
@@ -64,7 +66,7 @@ app.post(webHookPath, function(req, res) {
     };
 
     request(options, function(error, response, body) {
-      dialog.outgoing(payload, response.body);
+      dialog.outgoing(payload, body);
     })
   };
 
