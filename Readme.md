@@ -1,6 +1,6 @@
 # Facebook Messenger Node.js Chatbot
 
-An example [Facebook Messenger](https://kik.com) node.js chatbot integrated with [Dialog Analytics](https://dialoganalytics.com). Built with [expressjs/express](https://github.com/expressjs/express).
+An example [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) node.js chatbot integrated with [Dialog Analytics](https://dialoganalytics.com). Built with [expressjs/express](https://github.com/expressjs/express).
 
 - [Dialog Documention](https://docs.dialoganalytics.com)
 - [Dialog API reference](https://docs.dialoganalytics.com/reference)
