@@ -1,21 +1,15 @@
 module.exports = {
-  text: "Which one do you prefer?",
-  quick_replies: [
+  "text":"Pick a color:",
+  "quick_replies":[
     {
-      content_type: 'text',
-      title: 'Amazon Alexa',
-      payload: 'ALEXA'
+      "content_type":"text",
+      "title":"Red",
+      "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
     },
     {
-      content_type: 'text',
-      title: 'Google Actions',
-      payload: 'GOOGLE'
-    },
-    {
-      content_type: 'text',
-      title: 'DingDong',
-      payload: 'DINGDONG'
+      "content_type":"text",
+      "title":"Green",
+      "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
     }
-  ],
-  typing: true
+  ]
 };
