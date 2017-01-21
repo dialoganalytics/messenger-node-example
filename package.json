@@ -8,6 +8,17 @@
     "debug": "node debug bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dialoganalytics/messenger-node-example.git"
+  },
+  "keywords": [
+    "facebook messenger",
+    "bot",
+    "chatbot",
+    "conversation",
+    "dialog"
+  ],
   "author": "Dialog Analytics",
   "license": "MIT",
   "dependencies": {
@@ -16,5 +27,9 @@
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "request": "^2.79.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dialoganalytics/messenger-node-example/issues"
+  },
+  "homepage": "https://github.com/dialoganalytics/messenger-node-example#readme"
 }
